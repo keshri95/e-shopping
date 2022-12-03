@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Rating from "./Rating";
 
 const Filter = () => {
-  const [rate, setRate] = useState(3);
+  const [rate, setRate] = useState();
   return (
     <div className="bg-light w-25">
        
@@ -56,7 +56,7 @@ const Filter = () => {
 
           <div className="d-flex py-2">
             <label className="form-check-label" htmlFor="flexCheckDefault">Ratings:</label>
-         
+            <Rating rating={rate} style={{cursor: "pointer"}} onClick={(i) => setRate(i +1)} />
           </div>
 
           <div className="d-grid me-3 py-2">
