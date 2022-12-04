@@ -20,9 +20,9 @@ code {
   box-sizing: border-box;
 }
 .home{
+  overflow-y:hidden !important;
   display: flex;
 }
 
 .productContainer{
-
 }
