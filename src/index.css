@@ -26,3 +26,12 @@ code {
 
 .productContainer{
 }
+
+.cartContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutContainer{
+  height: 90vh;
+}
