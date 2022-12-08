@@ -20,6 +20,14 @@ const reducer = (state, action) => {
         cart: state.cart.filter((item) => item.id !== action.payload.id),
       };
 
+    case "CHANGE_LIST":
+      return {
+        ...state,
+        cart: state.cart.filter((select) =>
+          select.id === action.payload.id ? (select.qty = action.payload.qty): select.qty
+        ),
+      };
+
     default:
       return state;
   }
