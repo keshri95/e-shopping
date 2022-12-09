@@ -1,6 +1,6 @@
 import React from "react";
 
-const reducer = (state, action) => {
+export const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
       return {
@@ -31,8 +31,59 @@ const reducer = (state, action) => {
     default:
       return state;
   }
-
-  return <div>reducer</div>;
 };
 
-export default reducer;
+
+export const productReducer = (state, action) => {
+
+  switch(action.type){
+
+    case "SORT_BY_PRICE":
+      return{
+        ...state,
+        sort: action.payload,
+      }
+
+      case "SORT_BY_RATINGS":
+        return {
+          ...state,
+          byRatings: action.payload,
+        }
+
+      case "SORT_BY_STOCK":
+        return {
+          ...state,
+          byStock: !state.byStock,
+        }
+
+
+      case "SORT_BY_DELIVERY":
+        return{
+          ...state,
+          byFastDelivery: !state.byFastDelivery,
+        }
+
+
+      case "SORT_BY_SEARCH":
+          return{
+
+            ...state,
+            searchQuery: action.payload,
+          }
+
+      case "CLEAR_FILTER":
+        return{
+          byStock: false,
+          byFastDelivery: false,
+          byRatings: 0,
+          searchQuery: "",
+        }
+
+
+      
+
+    default: 
+      return state;
+  }
+
+}
