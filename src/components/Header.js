@@ -4,11 +4,16 @@ import Cart from "./Cart";
 import { useGlobalContext } from "./context/context";
 
 const Header = () => {
-  const {
-    state: { cart },
-    dispatch,
-  } = useGlobalContext();
+  const { state: { cart }, dispatch, productDispatch } = useGlobalContext();
+
   console.log(cart);
+
+
+  // const {productState: { byStock,byFastDelivery,byRatings, sort, searchQuery} , productDispatch } = useGlobalContext(); 
+
+
+  // console.log({byStock,byFastDelivery,byRatings, sort, searchQuery, sort});
+  
   return (
     <>
       <div className="py-3 bg-light">
@@ -27,6 +32,13 @@ const Header = () => {
                   className="form-control"
                   placeholder="Search products..."
                   aria-label="State"
+
+                  onChange={(e) => {
+                    productDispatch({
+                      type: "SORT_BY_SEARCH",
+                      payload: e.target.value,
+                    })
+                  }}
                 />
               </form>
             </div>

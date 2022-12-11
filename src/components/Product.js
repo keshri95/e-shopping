@@ -6,7 +6,7 @@ const Product = ({ elem }) => {
   const {
     state: { cart },dispatch} = useGlobalContext();
 
-  console.log(cart);
+  // console.log(cart);
 
   return (
     <>
