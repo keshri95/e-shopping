@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Cart from "./Cart";
+// import Cart from "./Cart";
 import { useGlobalContext } from "./context/context";
 
 const Header = () => {
   const { state: { cart }, dispatch, productDispatch } = useGlobalContext();
 
-  console.log(cart);
+  // console.log(cart);
 
 
   // const {productState: { byStock,byFastDelivery,byRatings, sort, searchQuery} , productDispatch } = useGlobalContext(); 

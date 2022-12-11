@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { createContext, useContext } from "react";
+import { useContext } from "react";
 import { faker } from "@faker-js/faker";
 // import reducer from "./reducer";
 import { productReducer, reducer } from "./reducer";
@@ -21,12 +21,12 @@ const initalState = {
 };
 
 
-const productInitialState = {
-    byStock: false,
-    byFastDelivery: false,
-    byRatings: 0,
-    searchQuery: "",
-}
+// const productInitialState = {
+//     byStock: false,
+//     byFastDelivery: false,
+//     byRatings: 0,
+//     searchQuery: "",
+// }
 
 const AppContext = React.createContext();
 
@@ -36,15 +36,15 @@ const AppProvider = ({ children }) => {
   
   // sort reducers --
 
-  const [productState, productDispatch] = useReducer(productReducer, productInitialState);
+  // const [productState, productDispatch] = useReducer(productReducer, productInitialState);
 
 
-  // const [productState, productDispatch] = useReducer(productReducer, {
-  //   byStock: false,
-  //   byFastDelivery: false,
-  //   byRatings: 0,
-  //   searchQuery: "",
-  // });
+  const [productState, productDispatch] = useReducer(productReducer, {
+    byStock: false,
+    byFastDelivery: false,
+    byRatings: 0,
+    searchQuery: "",
+  });
 
   // console.log(productInitialState)
 

@@ -9,7 +9,7 @@ const Filter = () => {
   const { productState: { byStock,byFastDelivery,byRatings, sort } , productDispatch } = useGlobalContext(); 
   
 
-  console.log({ byStock,byFastDelivery,byRatings, sort});
+  // console.log({ byStock,byFastDelivery,byRatings, sort});
 
   return (
     <div className="bg-light w-25">
