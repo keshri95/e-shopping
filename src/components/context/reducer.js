@@ -66,7 +66,6 @@ export const productReducer = (state, action) => {
 
       case "SORT_BY_SEARCH":
           return{
-
             ...state,
             searchQuery: action.payload,
           }

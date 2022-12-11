@@ -20,23 +20,33 @@ const initalState = {
   cart: [],
 };
 
+
+const productInitialState = {
+    byStock: false,
+    byFastDelivery: false,
+    byRatings: 0,
+    searchQuery: "",
+}
+
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initalState);
 
+  
   // sort reducers --
-
-  const productInitialState = {
-    byStock: false,
-    byFastDelivery: false,
-    byRatings: 0,
-    searchQuery: "",
-  }
 
   const [productState, productDispatch] = useReducer(productReducer, productInitialState);
 
-  console.log(productInitialState)
+
+  // const [productState, productDispatch] = useReducer(productReducer, {
+  //   byStock: false,
+  //   byFastDelivery: false,
+  //   byRatings: 0,
+  //   searchQuery: "",
+  // });
+
+  // console.log(productInitialState)
 
 
 
