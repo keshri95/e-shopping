@@ -28,7 +28,7 @@ const Cart = () => {
                 const { name, price, image, ratings } = item;
 
                 return (
-                  <div className="card" key={ind}>
+                  <div className="card my-1" key={ind}>
                     <div className="row g-0 align-items-center">
                       <div className="col-md-2">
                         <img

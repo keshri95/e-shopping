@@ -14,24 +14,3 @@ code {
 }
 */
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.home{
-  overflow-y:hidden !important;
-  display: flex;
-}
-
-.productContainer{
-}
-
-.cartContainer{
-  display: flex;
-  justify-content: space-between;
-}
-
-.checkoutContainer{
-  height: 90vh;
-}

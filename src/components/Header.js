@@ -4,25 +4,31 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "./context/context";
 
 const Header = () => {
-  const { state: { cart }, dispatch, productDispatch } = useGlobalContext();
+  const {
+    state: { cart },
+    dispatch,
+    productDispatch,
+  } = useGlobalContext();
 
   // console.log(cart);
 
-
-  // const {productState: { byStock,byFastDelivery,byRatings, sort, searchQuery} , productDispatch } = useGlobalContext(); 
-
+  // const {productState: { byStock,byFastDelivery,byRatings, sort, searchQuery} , productDispatch } = useGlobalContext();
 
   // console.log({byStock,byFastDelivery,byRatings, sort, searchQuery, sort});
-  
+
   return (
     <>
       <div className="py-3 bg-light">
         <div className="container">
+                
           <div className="row">
-            <div className="col-sm">
+
+            <div className="col-sm-3">
+
               <Link className="navbar-brand" to="/">
                 <p className="fs-4">E-Shop</p>
               </Link>
+              
             </div>
 
             <div className="col-sm-6">
@@ -43,7 +49,7 @@ const Header = () => {
               </form>
             </div>
 
-            <div className="col-sm">
+            <div className="col-sm-3">
               <div className="btn-group">
                 <button
                   type="button"
@@ -95,7 +101,7 @@ const Header = () => {
                           </div>
                         );
                       })}
-                      <div className="d-grid m-1">
+                      <div className="d-grid">
                         <Link to="cart" className="btn btn-primary">
                           Go To Cart
                         </Link>
@@ -105,6 +111,7 @@ const Header = () => {
                 </ul>
               </div>
             </div>
+
           </div>
         </div>
       </div>

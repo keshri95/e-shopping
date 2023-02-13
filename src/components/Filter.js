@@ -12,11 +12,11 @@ const Filter = () => {
   // console.log({ byStock,byFastDelivery,byRatings, sort});
 
   return (
-    <div className="bg-light w-25">
+    <div className="bg-light">
        
       <div className="ps-5">
-        <div>
-          <p className="fs-2">Filter Products</p>
+        {/* <div> */}
+          <p className="fs-5 filterText__heading">Filter Products</p>
           <div className="form-check py-2">
             <input
               className="form-check-input"
@@ -104,10 +104,10 @@ const Filter = () => {
                 type: "CLEAR_FILTER",
               })
             }}>
-              Clear Filters
+              Clear Filter
             </button>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );
