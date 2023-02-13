@@ -60,7 +60,7 @@ const Header = () => {
                   <i className="fa-solid fa-cart-shopping"></i>
                   <span>{cart.length}</span>
                 </button>
-                <ul className="dropdown-menu" style={{ width: "350px" }}>
+                <ul className="dropdown-menu" style={{ width: "300px" }}>
                   {cart.length === 0 ? (
                     <li>
                       <Link className="dropdown-item">Cart is empty!</Link>
